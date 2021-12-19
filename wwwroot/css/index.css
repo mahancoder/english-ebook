@@ -1,0 +1,146 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.root {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202124;
+}
+
+.player {
+    width: auto;
+    padding: 5px;
+}
+
+.canvas {
+    border: 15px grey;
+    border-radius: 25px;
+    border-style: solid;
+    width: 70vw;
+    height: 80vh;
+    margin-bottom: 2%;
+    padding: 10px;
+}
+
+.button {
+    background-color: grey;
+    color: white;
+    width: 95px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: rgb(99, 97, 97);
+}
+
+.button:active {
+    background-color: rgb(82, 82, 82);
+}
+
+.next {
+    float: right;
+    background-image: url("../right.png");
+    background-position: right;
+    padding-right: 25px;
+}
+
+.prev {
+    background-image: url("../left.png");
+    background-position: left;
+    padding-left: 25px;
+}
+
+.frame {
+    border: none;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s;
+    border-radius: 10px;
+    display: block;
+}
+
+.center {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    color: antiquewhite;
+}
+
+.logo {
+    width: 20%;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #ff6d7a;
+}
+
+.intro {
+    font-size: 150%;
+    word-spacing: 4px;
+}
+
+[class*="fade"] {
+    opacity: 0;
+}
+
+.sans {
+    font-family: sans-serif;
+}
+
+.desc {
+    font-size: 23px;
+}
+
+.os {
+    width: 50%;
+}
+
+.os_chart {
+    width: 35%;
+}
+
+.driver {
+    width: 35%;
+}
+
+.comp-list {
+    text-align: left;
+}
+
+.comp-list li {
+    color: antiquewhite;
+    text-align: left;
+    font-size: 20px;
+}
+
+.kernel {
+    width: 27%;
+}
