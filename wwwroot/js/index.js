@@ -12,14 +12,19 @@ function load(ev) {
 }
 
 function nextPage(ev) {
-    fade();
     page++;
+    fade();
     load();
 }
 
 function prevPage(ev) {
-    fade();
     page--;
+    try {
+        fade();
+    }
+    catch (c) {
+        console.log("Fade error")
+    }
     load();
 }
 document.body.onload = load;

@@ -18,6 +18,9 @@
 .player {
     width: auto;
     padding: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .canvas {
@@ -25,7 +28,7 @@
     border-radius: 25px;
     border-style: solid;
     width: 70vw;
-    height: 80vh;
+    flex: 1;
     margin-bottom: 2%;
     padding: 10px;
 }
@@ -75,6 +78,8 @@
 
 .center {
     text-align: center;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s;
 }
 
 h1,
@@ -93,10 +98,11 @@ span {
 }
 
 .title {
-    font-size: 50px;
+    font-size: 5vw;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: #ff6d7a;
+    margin: 0 0 4vh 0;
 }
 
 .intro {
@@ -113,7 +119,7 @@ span {
 }
 
 .desc {
-    font-size: 23px;
+    font-size: 2vw;
 }
 
 .os {
@@ -141,8 +147,6 @@ span {
 .kernel {
     width: 27%;
 }
-
-.center {
-    opacity: 0;
-    transition: visibility 0s, opacity 1s;
+.philosophy {
+    width: 45%;
 }
