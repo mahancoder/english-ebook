@@ -2,13 +2,12 @@ const iframe = document.getElementById("frame");
 var page = 1;
 
 function fade(ev) {
-    iframe.style.opacity = 0;
+    iframe.contentWindow.document.getElementsByClassName("center")[0].style.opacity = 0;
 }
 
 function load(ev) {
     setTimeout(() => {
         iframe.setAttribute("src", `pages/${page}.html`);
-        iframe.style.opacity = 1;
     }, 500);
 }
 
