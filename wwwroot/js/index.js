@@ -8,7 +8,6 @@ function fade(ev) {
 function load(ev) {
     setTimeout(() => {
         iframe.setAttribute("src", `pages/${page}.html`);
-        iframe.style.visibility = "visible";
         iframe.style.opacity = 1;
     }, 500);
 }

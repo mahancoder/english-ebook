@@ -1,4 +1,5 @@
 document.body.onload = () => {
+    document.getElementsByClassName("center")[0].style.opacity = 1;
     var fades = document.querySelectorAll("[class*=\"fade\"]");
     var reg = /^fade/;
     for (const elem of fades) {
