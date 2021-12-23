@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 14</title>
+    <link rel="stylesheet" href="../wwwroot/css/index.css" />
+</head>
+
+<body>
+    <div class="center">
+        <h2 class="title">K. Command flags</h2>
+        <p class="sans desc">There is a special type of argument, called a flag. flags are letters/words prefixed with a
+            dash. They do not give the command data, like which file to remove. But rather, define options. Flags are
+            predefined, and you can get a list of all available flags for a command in its documentation. For example,
+            the <i>nano</i> command has a flag <i>-i</i> which will make it so it will ask you to make sure you want to
+            delete a file, for every file it tries to delete. Flags can be given to commands just like arguments,
+            separated by space. Flags are usually a letter prefixed with a single dash, eg. "-i" or, a letter, or a word
+            prefixed by 2 dashes, eg. "--interactive". Most of the time there is a shorthand flag like "-i" and a long
+            descriptive one like "--interactive", however, they both do the same thing. Flags also sometimes get a
+            value. For example, the <i>nano</i> command, which is a CLI text editor, has a flag for the
+            backup file location, "--backupdir" or "-C" for short. They both get a value. For example, to give them the
+            "/home/mahan/config/nano" directory, you can either do "nano -C /home/mahan/config/nano file_to_edit.txt" or "nano --backupdir=/home/mahan/config/nano file_to_edit.txt". Notice that the
+            shorthand flag's value is right in front of the flag, separated by a space, but the long flag has its value
+            in front of it after an equal mark. That's usually the case, however, none of these are rules, so you might
+            find commands that behave differently. For example, the <i>find</i> command takes a "-name" argument.
+            Although it's a long word, neither does it have double dashes, nor it gets the value by equal mark, but it
+            behaves just like a shorthand flag, eg. "find -name file.txt".</p>
+        <script src="../wwwroot/js/pages.js"></script>
+</body>
+
+</html>

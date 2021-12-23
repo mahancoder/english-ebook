@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 16</title>
+    <link rel="stylesheet" href="../wwwroot/css/index.css" />
+</head>
+
+<body>
+    <div class="center">
+        <h2 class="title">M. Linux filesystem structure</h2>
+        <p class="sans desc">
+            Linux file system is very different from Windows but more similar to Mac since Mac is also a Unix-like OS.
+            There is no C:\ Drive in Linux. But rather, the partition (drive) is called the "root" partition, and can be
+            accessed by the address "/". Most OS-related files rely somewhere in the root folder. Almost
+            everything you do in your machine resides in the root folder. You can go to the root folder in the terminal
+            with "cd /" and then list all of its content (even hidden ones with "-a" flag) with "ls -a"
+            Let's discuss some standard directories in Unix-like systems.
+        </p>
+        <ul class="comp-list sans">
+            <li>"." and "..": These are in all directories. They are not actual folders, but rather some links. "."
+                means the current folder. For example, if you are in the folder "/etc/default", running "nano ./grub"
+                will be translated to "nano /etc/default/grub". Similarily, ".." represents the parent folder. eg. if
+                you are in "/usr/share/applications", ".." will point to the "/usr/share" folder, ie. "nano
+                ../docs/xorg/index.html" will be translated to "nano /usr/share/docs/xorg/index.html"</li>
+            <br />
+            <li>bin: Command and app binary files. Remember, commands are just applications, and applications are just
+                instruction files!</li>
+            <br />
+            <li>dev: In Linux, every device is a file. The file does not actually exist in the disk, but it can be used
+                to access devices, ie. writing to the printer's "device file" located somewhere in "/dev" will lead to
+                the pritner operating.</li>
+            <br />
+            <li>boot: Boot related files. Grub bootloader readonly config and binary files</li>
+            <br />
+            <li>etc: Program Configuration files. Grub configuration files can be found at "/etc/default/grub"</li>
+            <br />
+            <li>home: User home folders reside in "/home/username". Home folder contains user-related files. This is the
+                place where you should use to stoer personal data and is the only place where your regular user has
+                write/modify level permissions. The home folder of the current logged in user can be accessed using "~".
+                Eg. "~/Donwloads" will be translated to "/home/username/Downloads"</li>
+            <br />
+            <li>usr: The global user folder. Configuration files for apps that the user - and not the system - uses
+                residehere. However, they are global. Meaning the app will use that config file for all user.s For local
+                user configuration, use the home folder. Eg. instead of "/usr/local/applications", you can view user
+                specific app files in "~/.local/applications". Note that this is also not a standard, and the app should
+                also support user specific configuration</li>
+            <br />
+            <li>/usr/bin: Binaries that are used byt the user and not the system. Most command binary files can be found
+                in here.</li>
+            <br />
+            <li>lib: Application library files</li>
+            <br />
+            <li> /usr/lib: User-side application library files</li>
+            <br />
+            <li>tmp: Temporary files folder. Everything in there will be deleted on reboot</li>
+            <br />
+            <li>var: Files that change frequently should be placed here. Stands for variable.</li>
+            <br />
+            <li>proc: Similar to dev, not an actual folder, but a way to access processes. You don't need to worry about
+                anything in there.</li>
+            <br />
+            <li>mnt: Other disk mount locations. Mounting is a way to assing an address to a parition (drive). Your root
+                drive is mounted at "/". Other drives should be mounted as folders in /mnt. It's not a rule, but it's a
+                good practice to mount paritions in mnt folder. You can use "mnt" command to mount paritions, however,
+                most systems will do it automatically.</li>
+            <br />
+            <li>media: Usually, automatically mouted drives are mounted in here instead of mnt.</li>
+            <br />
+            <li>opt: Installation location of add-on applications. If you are installing an app manually by copying its
+                files, install it in here.</li>
+            <br />
+            <li> Note that in Linux everything is a file. Processes are files. Devices are files. The CPU is a file.
+                However, they are not actual files. They are virtual. They show up as a file, but they don't take any
+                space. They cannot be deleted. You cannot create a device file, since the kernel manages them. Trying to
+                read/write to device files results in kernel calls.</li>
+        </ul>
+        <script src="../wwwroot/js/pages.js"></script>
+</body>
+
+</html>
