@@ -6,23 +6,28 @@ function fade(ev) {
     iframe.contentWindow.document.getElementsByClassName("center")[0].style.opacity = 0;
 }
 
+const playButton = document.getElementById("sound");
 function load(ev) {
     setTimeout(() => {
         iframe.setAttribute("src", `pages/${page}.html`);
     }, 500);
     audio = new Audio(`sounds/${page}.mp3`);
-    audio.addEventListener("loadeddata", () => { document.getElementById("sound").style.backgroundImage = "url(\"wwwroot/sound.png\")"; document.getElementById("sound").disabled = false; } );
-    audio.addEventListener("ended", () => { document.getElementById("sound").style.backgroundImage = "url(\"wwwroot/sound.png\")"; playing=false; } );
+    audio.addEventListener("loadeddata", () => { playButton.style.backgroundImage = "url(\"wwwroot/sound.png\")"; playButton.disabled = false; } );
+    audio.addEventListener("ended", () => { playButton.style.backgroundImage = "url(\"wwwroot/sound.png\")"; playing=false; } );
 }
 
 function nextPage(ev) {
     page++;
+    playButton.disabled = true;
+    playButton.style.backgroundImage = "url(\"wwwroot/loading.gif\")";
     fade();
     load();
 }
 
 function prevPage(ev) {
     page--;
+    playButton.disabled = true;
+    playButton.style.backgroundImage = "url(\"wwwroot/loading.gif\")";
     try {
         fade();
     }
@@ -35,15 +40,15 @@ function toggle() {
     if (playing) {
         audio.pause();
         playing = false;
-        document.getElementById("sound").style.backgroundImage = "url(\"wwwroot/sound.png\")";
+        playButton.style.backgroundImage = "url(\"wwwroot/sound.png\")";
     }
     else {
         audio.play();
         playing = true;
-        document.getElementById("sound").style.backgroundImage = "url(\"wwwroot/pause.png\")";
+        playButton.style.backgroundImage = "url(\"wwwroot/pause.png\")";
     }
 }
 document.body.onload = load;
 document.getElementById("next").onclick = nextPage;
 document.getElementById("prev").onclick = prevPage;
-document.getElementById("sound").onclick = toggle;
+playButton.onclick = toggle;
