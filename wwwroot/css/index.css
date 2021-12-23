@@ -151,20 +151,33 @@ span {
 .philosophy {
     width: 45%;
 }
+
 .terminal {
     width: 40vw;
 }
+
 .code {
     color: rgb(255, 55, 55);
     font-size: 2vw;
 }
+
 .rm {
     width: 28%;
 }
+
 .distro {
     display: inline-block;
     width: 24vw;
 }
+
 .comp-list li a {
     color: white;
+}
+
+.sound {
+    background-image: url("../loading.gif");
+    float: right;
+    margin-right: 15px;
+    width: 35px;
+    background-position: center;
 }
