@@ -11,12 +11,15 @@ function load(ev) {
     setTimeout(() => {
         iframe.setAttribute("src", `pages/${page}.html`);
     }, 500);
-    audio = new Audio(`sounds/${page}.mp3`);
+    audio = new Audio(`sounds/${page}.m4a`);
     audio.addEventListener("loadeddata", () => { playButton.style.backgroundImage = "url(\"wwwroot/sound.png\")"; playButton.disabled = false; } );
     audio.addEventListener("ended", () => { playButton.style.backgroundImage = "url(\"wwwroot/sound.png\")"; playing=false; } );
 }
 
 function nextPage(ev) {
+    if (page == 19) {
+        return;
+    }
     page++;
     playButton.disabled = true;
     playButton.style.backgroundImage = "url(\"wwwroot/loading.gif\")";
@@ -25,6 +28,9 @@ function nextPage(ev) {
 }
 
 function prevPage(ev) {
+    if (page == 1) {
+        return;
+    }
     page--;
     playButton.disabled = true;
     playButton.style.backgroundImage = "url(\"wwwroot/loading.gif\")";

@@ -1,1 +1,5 @@
 sounds/*
+dist/*
+__pycache__/*
+build/*
+open.spec

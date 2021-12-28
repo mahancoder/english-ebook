@@ -11,7 +11,7 @@
 
 <body>
     <div class="center">
-        <h2 class="title">M. Linux filesystem structure</h2>
+        <h2 class="title">M. Linux filesystem hierarchy</h2>
         <p class="sans desc">
             Linux file system is very different from Windows but more similar to Mac since Mac is also a Unix-like OS.
             There is no C:\ Drive in Linux. But rather, the partition (drive) is called the "root" partition, and can be
@@ -44,12 +44,12 @@
                 Eg. "~/Donwloads" will be translated to "/home/username/Downloads"</li>
             <br />
             <li>usr: The global user folder. Configuration files for apps that the user - and not the system - uses
-                residehere. However, they are global. Meaning the app will use that config file for all user.s For local
+                reside here. However, they are global. Meaning the app will use that config file for all users. For local
                 user configuration, use the home folder. Eg. instead of "/usr/local/applications", you can view user
                 specific app files in "~/.local/applications". Note that this is also not a standard, and the app should
                 also support user specific configuration</li>
             <br />
-            <li>/usr/bin: Binaries that are used byt the user and not the system. Most command binary files can be found
+            <li>/usr/bin: Binaries that are used by the user and not the system. Most command binary files can be found
                 in here.</li>
             <br />
             <li>lib: Application library files</li>
@@ -65,7 +65,7 @@
             <br />
             <li>mnt: Other disk mount locations. Mounting is a way to assing an address to a parition (drive). Your root
                 drive is mounted at "/". Other drives should be mounted as folders in /mnt. It's not a rule, but it's a
-                good practice to mount paritions in mnt folder. You can use "mnt" command to mount paritions, however,
+                good practice to mount paritions in mnt folder. You can use "mount" command to mount paritions, however,
                 most systems will do it automatically.</li>
             <br />
             <li>media: Usually, automatically mouted drives are mounted in here instead of mnt.</li>
